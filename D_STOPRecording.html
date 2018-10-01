@@ -1,0 +1,141 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/HOMEPAGE.css">
+</head>
+    
+<title>penge site name</title>
+    
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    })
+    
+</script>
+                    
+    <body>
+        
+        <!--------------------------------------------------------- START / NAV BAR --------------------------------------------------------->
+        
+        <div class="hero-image">
+            <nav class="z-depth-0" style="padding: 0px 10px 10px 10px; background-color: rgba(255, 255, 255, 0.2);">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo"><img class="responsive-image" id="logo" src="images/Logo_Colored_4.png"/></a>
+
+                    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                        <i class="material-icons">menu</i>
+                    </a>
+
+                    <ul class="right hide-on-med-and-down" id="deets" style="">
+                        <li><a href="D_Notification.html" class="black-text"><i class="material-icons left black-text">notification_important</i>Notifications</a></li>
+                        <li><a href="#" class="black-text"><i class="material-icons left black-text">account_circle</i>Manage Account</a></li>
+                         <li><a href="login.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <ul class="sidenav" id="mobile-nav">
+                <li><a href="D_Notification.html" class="black-text"><i class="material-icons left black-text">notification_important</i>Notifications</a></li>
+                <li><a href="#" class="black-text"><i class="material-icons left black-text">account_circle</i>Manage Account</a></li>
+                <li><a href="LOGIN.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
+            </ul>
+        </div>
+
+        <!------------------------------------------------------- BODY STARTS HERE ------------------------------------------------------------->
+            
+                    <!------------------------------------- ROW1- What to do? ------------------------------------------->
+            
+        
+        <div class="col s12 white"><div class="col s12 m12 l12 center white">
+                    
+            <div class="section"></div>
+                    
+            <h3 id="greeting"><i class="material-icons" style="font-size: 40px;">stop</i>&nbsp;&nbsp; Stop Recording</h3>
+            <div class="section"></div>
+            <div class="divider"></div>
+            <div class="section"></div>
+                    
+        </div>    
+        <div class="col s12 m12 l12  white" style="padding: 0px 20px 0px 30px">
+            <form method=post>
+            <div class="row">
+                
+                <div class="col s3"></div>
+                <div class = "col s3 center">
+                    <h5 class="">Enter Device ID</h5>
+                        <div class="input-field center">
+                        <input id="device_ID" type="text" class="validate">
+                        <label for="device_ID">Device ID</label>
+                        </div>
+                        <div class='row center'>
+                            <button id='deviceID' class='btn btn-small waves-effect'>Load</button>
+                        </div>
+                    
+                </div>
+                
+                <div class="col s3 center">
+                    <h5 class="">Patient/s using the Device</h5>
+                    <script>
+                        $(document).ready(function(){
+                        $("#deviceID").click(function(){
+                        $("#device_ID").val("123");
+                        $("#namesofUser").append('<label><input type="checkbox" class="filled-in" checked="checked" /><span>Tommy Botabara</span>');
+                        event.preventDefault();
+                        });
+                    });
+                    </script>
+                    
+                    <p id="namesofUser"></p>
+                    
+                </div>
+                <div class="col s3"></div>
+                
+            </div>
+            
+            <DIV class="row">
+            
+                <div class="col s3"></div>
+                <div class="col s6 center">
+                
+                    <button class="btn btn-large waves-effect red lighten-2" type="submit">Stop Recording</button>
+                    
+                </div>
+                <div class="col s3"></div>
+            
+            </DIV>
+            </form>  
+        </div>
+        <section></section>
+        <section></section>
+        </div>
+        
+        <!----------------------------------------------------- FOOTER STARTS HERE ----------------------------------------------------------->
+            <footer class="page-footer" style="background-color: rgba(255, 255, 255, 0.3);">
+              <div class="container">
+                <div class="row">
+                  <div class="col l6 s12">
+                    <h5 class="black-text">About the SiteName</h5>
+                    <p class="black-text">This SiteName is a system created to be able to </p>
+                  </div>
+                  <div class="col l4 offset-l2 s12">
+                    <h5 class="black-text">Links</h5>
+                    <ul>
+                      <li><a class="black-text" href="#!">Link 1</a></li>
+                      <li><a class="black-text" href="#!">Link 2</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="container black-text">
+                © 2018 All Rights Reserved
+                <a class="black-text right" href="#!">More Links</a>
+                </div>
+              </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/HOMEPAGE.css">
+</head>
+    
+<title>penge site name</title>
+    
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    })
+</script>      
+
+    <body>
+        
+        <!--------------------------------------------------------- START / NAV BAR --------------------------------------------------------->
+        
+        <div class="hero-image">
+            <nav class="z-depth-0" style="padding: 0px 10px 10px 10px; background-color: rgba(255, 255, 255, 0.2);">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo"><img class="responsive-image" id="logo" src="images/Logo_Colored_4.png"/></a>
+
+                    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                        <i class="material-icons">menu</i>
+                    </a>
+
+                    <ul class="right hide-on-med-and-down" id="deets" style="">
+                         <li><a href="LOGIN.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
+            </ul>
+        </div>
+            </nav>
+
+            <ul class="sidenav" id="mobile-nav">
+                <li><a href="LOGIN.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
+            </ul>
+        </div>
+
+        <!------------------------------------------------------- BODY STARTS HERE ------------------------------------------------------------->
+            
+                    <!------------------------------------- ROW1- What to do? ------------------------------------------->
+            
+        <div class="col s12 m12 l12 center white">
+                    
+            <div class="section"></div>
+                    
+            <h3 id="greeting"><i class="material-icons" style="font-size: 40px;">person_add</i>&nbsp;&nbsp;Create a User</h3>
+            <div class="section"></div>
+            <div class="divider"></div>
+            <div class="section"></div>
+                    
+        </div>
+      <div class="col s12 m12 l12  white">
+              <div class="row">
+                <form class="col s12 white" style="padding: 0px 50px 0px 50px;">
+                  <div class="row">
+                      
+                    <div class="input-field col s4">
+                      <input placeholder="ex: Juan" id="first_name" type="text" class="validate">
+                      <label for="first_name">First Name</label>
+                    </div>
+                      
+                    <div class="input-field col s4">
+                      <input placeholder="ex: Flores" id="middle_name" type="text" class="validate">
+                      <label for="middle_name">Middle Name</label>
+                    </div>
+                      
+                    <div class="input-field col s4">
+                      <input placeholder="ex: Dela Cruz" id="last_name" type="text" class="validate">
+                      <label for="last_name">Last Name</label>
+                    </div>
+                      
+                    <div class="col s4">
+                    Type of User
+                      <p>
+                        <label>
+                            <input name ="userType" type="radio" id="0"/>
+                            <span>Doctor</span></label>
+                      </p>
+                      <p>
+                        <label>
+                            <input name ="userType" type="radio" id="1"/>
+                            <span>Patient</span>
+                        </label>
+                      </p>
+                      </div>
+                      
+                      <div class="input-field col s4">
+                      <input placeholder="ex: 16" id="age" type="number" class="validate">
+                      <label for="age">Age</label>
+                      </div>
+                      
+                      <div class="input-field col s4">
+                      <input placeholder="ex: Keeping track of vitals everyday." id="reason" type="text" class="validate">
+                      <label for="reason">Reason for Using Device</label>
+                      </div>
+                  </div>
+                    <center>
+                    
+                        <div class='row center'>
+                            <div class="col s5"></div>
+                            <button type='submit' name='btn_login' class='col s2 btn btn-large waves-effect'>Submit</button>
+                            <div class="col s5"></div>
+                        </div>
+                    
+                    </center>
+                    
+                </form>
+              </div>
+        </div>
+        <!----------------------------------------------------- FOOTER STARTS HERE ----------------------------------------------------------->
+            <footer class="page-footer" style="background-color: rgba(255, 255, 255, 0.3);">
+              <div class="container">
+                <div class="row">
+                  <div class="col l6 s12">
+                    <h5 class="black-text">About the SiteName</h5>
+                    <p class="black-text">This SiteName is a system created to be able to </p>
+                  </div>
+                  <div class="col l4 offset-l2 s12">
+                    <h5 class="black-text">Links</h5>
+                    <ul>
+                      <li><a class="black-text" href="#!">Link 1</a></li>
+                      <li><a class="black-text" href="#!">Link 2</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="container black-text">
+                © 2018 All Rights Reserved
+                <a class="black-text right" href="#!">More Links</a>
+                </div>
+              </div>
+            </footer>
+        </div>
+    </body>
+</html>

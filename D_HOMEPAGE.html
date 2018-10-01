@@ -1,0 +1,188 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/HOMEPAGE.css">
+</head>
+    
+<title>penge site name</title>
+    
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    })
+</script>      
+
+    <body>
+        
+        <!--------------------------------------------------------- START / NAV BAR --------------------------------------------------------->
+        
+        <div class="hero-image">
+            <nav class="z-depth-0" style="padding: 0px 10px 10px 10px; background-color: rgba(255, 255, 255, 0.2);">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo"><img class="responsive-image" id="logo" src="images/Logo_Colored_4.png"/></a>
+
+                    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                        <i class="material-icons">menu</i>
+                    </a>
+
+                    <ul class="right hide-on-med-and-down" id="deets" style="">
+                        <li><a href="D_Notification.html" class="black-text"><i class="material-icons left black-text">notification_important</i>Notifications</a></li>
+                        <li><a href="#" class="black-text"><i class="material-icons left black-text">account_circle</i>Manage Account</a></li>
+                         <li><a href="login.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <ul class="sidenav" id="mobile-nav">
+                <li><a href="D_Notification.html" class="black-text"><i class="material-icons left black-text">notification_important</i>Notifications</a></li>
+                <li><a href="#" class="black-text"><i class="material-icons left black-text">account_circle</i>Manage Account</a></li>
+                <li><a href="LOGIN.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
+            </ul>
+        </div>
+
+        <!------------------------------------------------------- BODY STARTS HERE ------------------------------------------------------------->
+            
+                    <!------------------------------------- ROW1- What to do? ------------------------------------------->
+        
+            <div class="row white">
+            
+                <div class="col s12 m12 l12 center">
+                    
+                    <div class="section"></div>
+                    
+                    <h3 id="greeting">Good day, Doctor!</h3>
+                    What do you want to do today?<br/>
+                    <div class="section"></div>
+                    <div class="divider"></div>
+                    <div class="section"></div>
+                    
+                </div>
+                
+                <div class="col s4 m4 l4 center teal lighten-2" style="padding: 30px 20px 20px 20px;">
+                    
+                    <a href="D_VIEWAssignedPatients.html"><img class="responsive-image" src="images/viewlistofusers.PNG" height="200px;"/></a>
+                    <div class="section"></div>
+                    <h6 id="greeting">View Assigned Patients</h6>
+                    <p align="justify">
+                        Lorem ipsum dolor sit amet, dapat naka-under na dito yung View Patient Medical Record + View Patient Records? Sorry bobo
+                    </p>
+                    
+                </div>
+                
+                <div class="col s4 m4 l4 center teal lighten-3" style="padding: 30px 20px 20px 20px;">
+                
+                    <a href="D_CHANGEintervals.html"><img class="responsive-image" src="images/changeinterval.PNG" height="200px;"/></a>
+                    <div class="section"></div>
+                    <h6 id="greeting">Change Recording Interval</h6>
+                    <p align="justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sollicitudin facilisis turpis, id rhoncus magna fermentum sed. Nunc vel venenatis mauris.
+                    </p>
+                    
+                
+                </div>
+                
+                <div class="col s4 m4 l4 center teal lighten-4" style="padding: 30px 20px 20px 20px;">
+                
+                    <a href="D_STOPRecording.html"><img class="responsive-image" src="images/stoprecord.PNG" height="200px;"/></a>
+                    <div class="section"></div>
+                    <h6 id="greeting">Stop Recording</h6>
+                    <p align="justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sollicitudin facilisis turpis, id rhoncus magna fermentum sed. Nunc vel venenatis mauris.
+                    </p>
+                    
+                </div>
+                
+        </div>
+                    <!------------------------------------- ROW2- Guide on Knowing ------------------------------------------>
+                
+                <div class="col s12 white">
+                    <div class="row white">
+                    <div class="col s12 center white">
+                        <div class="section"></div>
+                        <div class="divider"></div>
+                        <h3 class="center" id="greeting">Current Vitals Recorded from Patients</h3>
+                        Date: <b>September 30, 2018</b> | 11:30 PM
+                <!-- Maglalagay ako ng realtime clock dito -->
+                        <div class="section"></div>
+                        
+                        <div class="row white">
+                                <div class="col s2 center white"></div>
+                                <div class="col s8 center white">
+
+                                    <table class="centered">
+                                        <thead>
+                                          <tr>
+                                              <th>Patient ID</th>
+                                              <th>First Name</th>
+                                              <th>Last Name</th>
+                                              <th>Time</th>
+                                              <th>Heartrate</th>
+                                              <th>ECG</th>
+                                              <th>Temperature</th>
+                                              <th>Status</th>
+                                          </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            <tr>
+                                            <td>12345</td>
+                                            <td>Tommy</td>    
+                                            <td>Botabara</td>        
+                                            <td>4:00 PM</td>
+                                            <td>Data here</td>
+                                            <td>Data here</td>
+                                            <td>Data here</td>
+                                            <td>Normal</td>
+                                          </tr>
+                                            <tr>
+                                            <td>12347</td>  
+                                            <td>Jhoana Marie</td>    
+                                            <td>dela Cruz</td>      
+                                            <td>10:00PM</td>
+                                            <td>Data here</td>
+                                            <td>Data here</td>
+                                            <td>Data here</td>
+                                            <td>Normal</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+
+                                </div>
+                                <div class="col s2 center white"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        
+        <!----------------------------------------------------- FOOTER STARTS HERE ----------------------------------------------------------->
+            <footer class="page-footer" style="background-color: rgba(255, 255, 255, 0.3);">
+              <div class="container">
+                <div class="row">
+                  <div class="col l6 s12">
+                    <h5 class="black-text">About the SiteName</h5>
+                    <p class="black-text">This SiteName is a system created to be able to </p>
+                  </div>
+                  <div class="col l4 offset-l2 s12">
+                    <h5 class="black-text">Links</h5>
+                    <ul>
+                      <li><a class="black-text" href="#!">Link 1</a></li>
+                      <li><a class="black-text" href="#!">Link 2</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="container black-text">
+                © 2018 All Rights Reserved
+                <a class="black-text right" href="#!">More Links</a>
+                </div>
+              </div>
+            </footer>
+        </div>
+    </body>
+</html>
