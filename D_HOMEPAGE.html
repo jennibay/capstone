@@ -1,5 +1,10 @@
 <html>
 <head>
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -9,7 +14,168 @@
     
 <title>penge site name</title>
     
-<script>
+ <style>
+#chartdiv {
+	width	: 100%;
+	height	: 300px;
+}
+#chartdiv2 {
+	width	: 100%;
+	height	: 300px;
+}
+     
+</style>
+    
+<script>var chart = AmCharts.makeChart("chartdiv2", {
+    "type": "serial",
+    "theme": "light",
+    "marginRight": 70,
+    "autoMarginOffset": 20,
+    "dataProvider": [{
+        "year": "1995",
+        "value": 0.177
+    }, {
+        "year": "1996",
+        "value": 0.104
+    }, {
+        "year": "1997",
+        "value": 0.255
+    }, {
+        "year": "1998",
+        "value": 0.21
+    }, {
+        "year": "1999",
+        "value": 0.065
+    }, {
+        "year": "2000",
+        "value": 0.11
+    }, {
+        "year": "2001",
+        "value": 0.172
+    }, {
+        "year": "2002",
+        "value": 0.462
+    }, {
+        "year": "2003",
+        "value": 0.47
+    }, {
+        "year": "2004",
+        "value": 0.445
+    }, {
+        "year": "2005",
+        "value": 0.47
+    }],
+    "balloon": {
+        "cornerRadius": 6
+    },
+    "valueAxes": [{
+        "axisAlpha": 0
+    }],
+    "graphs": [{
+        "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]] C</span></b>",
+        "bullet": "round",
+        "bulletSize": 6,
+        "connect": false,
+        "lineColor": "#b6d278",
+        "lineThickness": 2,
+        "negativeLineColor": "#487dac",
+        "valueField": "value"
+    }],
+    "chartCursor": {
+        "categoryBalloonDateFormat": "YYYY",
+        "cursorAlpha": 0.1,
+        "cursorColor": "#000000",
+        "fullWidth": true,
+        "graphBulletSize": 2
+    },
+    "chartScrollbar": {},
+    "dataDateFormat": "YYYY",
+    "categoryField": "year",
+    "categoryAxis": {
+        "minPeriod": "YYYY",
+        "parseDates": true,
+        "minorGridEnabled": true
+    },
+    "export": {
+        "enabled": true
+    }
+});
+    
+var chart = AmCharts.makeChart("chartdiv", {
+    "type": "serial",
+    "theme": "light",
+    "marginRight": 70,
+    "autoMarginOffset": 20,
+    "dataProvider": [{
+        "year": "1995",
+        "value": 0.177
+    }, {
+        "year": "1996",
+        "value": 0.104
+    }, {
+        "year": "1997",
+        "value": 0.255
+    }, {
+        "year": "1998",
+        "value": 0.21
+    }, {
+        "year": "1999",
+        "value": 0.065
+    }, {
+        "year": "2000",
+        "value": 0.11
+    }, {
+        "year": "2001",
+        "value": 0.172
+    }, {
+        "year": "2002",
+        "value": 0.462
+    }, {
+        "year": "2003",
+        "value": 0.47
+    }, {
+        "year": "2004",
+        "value": 0.445
+    }, {
+        "year": "2005",
+        "value": 0.47
+    }],
+    "balloon": {
+        "cornerRadius": 6
+    },
+    "valueAxes": [{
+        "axisAlpha": 0
+    }],
+    "graphs": [{
+        "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]] C</span></b>",
+        "bullet": "round",
+        "bulletSize": 6,
+        "connect": false,
+        "lineColor": "#b6d278",
+        "lineThickness": 2,
+        "negativeLineColor": "#487dac",
+        "valueField": "value"
+    }],
+    "chartCursor": {
+        "categoryBalloonDateFormat": "YYYY",
+        "cursorAlpha": 0.1,
+        "cursorColor": "#000000",
+        "fullWidth": true,
+        "graphBulletSize": 2
+    },
+    "chartScrollbar": {},
+    "dataDateFormat": "YYYY",
+    "categoryField": "year",
+    "categoryAxis": {
+        "minPeriod": "YYYY",
+        "parseDates": true,
+        "minorGridEnabled": true
+    },
+    "export": {
+        "enabled": true
+    }
+});
+    
     $(document).ready(function(){
         $('.sidenav').sidenav();
     })
@@ -98,8 +264,8 @@
         </div>
                     <!------------------------------------- ROW2- Guide on Knowing ------------------------------------------>
                 
-                <div class="col s12 white">
-                    <div class="row white">
+            <div class="col s12 white">
+                <div class="row white">
                     <div class="col s12 center white">
                         <div class="section"></div>
                         <div class="divider"></div>
@@ -108,55 +274,46 @@
                 <!-- Maglalagay ako ng realtime clock dito -->
                         <div class="section"></div>
                         
-                        <div class="row white">
-                                <div class="col s2 center white"></div>
-                                <div class="col s8 center white">
-
-                                    <table class="centered">
-                                        <thead>
-                                          <tr>
-                                              <th>Patient ID</th>
-                                              <th>First Name</th>
-                                              <th>Last Name</th>
-                                              <th>Time</th>
-                                              <th>Heartrate</th>
-                                              <th>ECG</th>
-                                              <th>Temperature</th>
-                                              <th>Status</th>
-                                          </tr>
-                                        </thead>
-
-                                        <tbody>
-
-                                            <tr>
-                                            <td>12345</td>
-                                            <td>Tommy</td>    
-                                            <td>Botabara</td>        
-                                            <td>4:00 PM</td>
-                                            <td>Data here</td>
-                                            <td>Data here</td>
-                                            <td>Data here</td>
-                                            <td>Normal</td>
-                                          </tr>
-                                            <tr>
-                                            <td>12347</td>  
-                                            <td>Jhoana Marie</td>    
-                                            <td>dela Cruz</td>      
-                                            <td>10:00PM</td>
-                                            <td>Data here</td>
-                                            <td>Data here</td>
-                                            <td>Data here</td>
-                                            <td>Normal</td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-
+                        <div class="row white" style="margin: 10px">
+            
+                            <div class="col s12 white">
+                                <div class="col s6 white">
+                                    <h5 class="center green lighten-3"><b>Dela Cruz, Jhoana</b></h5>
+                                    <h6 class="center green lighten-4">ECG</h6>
+                                    <div id="chartdiv"></div>
+                                    <div class="col s6 center green lighten-4">
+                                        <h6 class="center">Temperature</h6>
+                                        <h4 class="center">37.9°C</h4>
+                                    </div>
+                                    <div class="col s6 center green lighten-5">
+                                        <h6 class="center">Heartrate</h6>
+                                        <h4 class="center">73 bpm</h4>
+                                    </div>
+                                    <a class="right btn-small waves-effect waves-light green lighten-2" href=""> View History of Vitals
+                                    <i class="material-icons left">person_outline</i>
+                                  </a>
                                 </div>
-                                <div class="col s2 center white"></div>
+                                <div class="col s6 center white">
+                                    <h5 class="green lighten-3"><b>Botabara, Tommy</b></h5>
+                                    <h6 class="center green lighten-4">ECG</h6>
+                                    <div id="chartdiv2"></div>
+                                    <div class="col s6 center green lighten-4">
+                                        <h6 class="center">Temperature</h6>
+                                        <h4 class="center">38°C</h4>
+                                    </div>
+                                    <div class="col s6 center green lighten-5">
+                                        <h6 class="center">Heartrate</h6>
+                                        <h4 class="center">81 bpm</h4>
+                                    </div>
+                                    <a class="right btn-small waves-effect waves-light green lighten-2" href=""> View History of Vitals
+                                    <i class="material-icons left">person_outline</i>
+                                  </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
         
         <!----------------------------------------------------- FOOTER STARTS HERE ----------------------------------------------------------->
