@@ -13,6 +13,11 @@
     $(document).ready(function(){
         $('.sidenav').sidenav();
     })
+    
+     $(document).ready(function(){
+    $('.modal').modal();
+  });
+       
 </script>      
 
     <body>
@@ -69,6 +74,7 @@
                         <thead>
                           <tr>
                               <th>ID</th>
+                              <TH>Type</TH>
                               <th>First Name</th>
                               <th>Middle Name</th>
                               <th>Last Name</th>
@@ -82,15 +88,17 @@
                           
                           <tr>
                             <td>12346</td>
+                            <td>Patient</td>
                             <td>Jennifer Marie</td>
                             <td>Zita</td>
                             <td>Ibay</td>
                             <td>19</td>
                             <td>Inactive</td>
-                            <td><a class="btn-floating btn-small waves-effect waves-light blue lighten-2" ><i class="material-icons">create</i></a>&nbsp;&nbsp;<a class="btn-floating btn-small waves-effect waves-light red lighten-2"><i class="material-icons">clear</i></a></td>
+                            <td><a class="btn-floating btn-small waves-effect waves-light blue lighten-2 modal-trigger" href="#editUser1" ><i class="material-icons">create</i></a>&nbsp;&nbsp;<a class="btn-floating btn-small waves-effect waves-light red lighten-2 modal-trigger" href="#removeUser1" ><i class="material-icons">clear</i></a></td>
                           </tr>
                           <tr>
                             <td>12347</td>
+                            <td>Patient</td>
                             <td>Jhoana</td>
                             <TD>Santos</TD>
                             <td>dela Cruz</td>
@@ -100,16 +108,67 @@
                           </tr>
                          <tr>
                             <td>12345</td>
+                            <td>Patient</td>
                             <td>Tommy</td>
                             <td>Mirabueno</td>
                             <td>Botabara</td>
                             <td>19</td>
                             <td>Active</td>
-                            <td>Keep track of vitals.</td>
                             <td><a class="btn-floating btn-small waves-effect waves-light blue lighten-2" ><i class="material-icons">create</i></a>&nbsp;&nbsp;<a class="btn-floating btn-small waves-effect waves-light red lighten-2"><i class="material-icons">clear</i></a></td>
                           </tr>
                         </tbody>
                       </table>
+            
+            <!--------------------------------------- ALL MODALS ARE HERE ---------------------------------------------------->
+            <div id="editUser1" class="modal">
+                <div class="modal-content">
+                  <h4>Edit User Details</h4>
+                  <div class="col s12 m12 l12 ">
+                    <div class="row">
+                      
+                    <div class="input-field col s4">
+                      <input placeholder="ex: Juan" id="first_name" type="text" class="validate">
+                      <label for="first_name">First Name</label>
+                    </div>
+                      
+                    <div class="input-field col s4">
+                      <input placeholder="ex: Flores" id="middle_name" type="text" class="validate">
+                      <label for="middle_name">Middle Name</label>
+                    </div>
+                      
+                    <div class="input-field col s4">
+                      <input placeholder="ex: Dela Cruz" id="last_name" type="text" class="validate">
+                      <label for="last_name">Last Name</label>
+                    </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col s4"></div>
+                        <div class="input-field col s4">
+                          <input placeholder="ex: 16" id="age" type="number" class="validate">
+                          <label for="age">Age</label>
+                        </div>
+                        <div class="col s4"></div>
+                      </div>
+                      
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Save</a> | <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+                </div>
+            </div>
+            
+            <div id="removeUser1" class="modal">
+                <div class="modal-content">
+                  <h4>Remove User</h4>
+                  Are you sure? 
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Remove</a> | <a href="#!" class="modal-close waves-effect waves-green btn-flat">Don't Remove</a>
+                </div>
+            </div>
+            <!---------------------------------------------------------------------------------------------------------------->
+            
             
             <div class="section"></div>
             <ul class="pagination center">
