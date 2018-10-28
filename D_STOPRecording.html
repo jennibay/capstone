@@ -14,6 +14,20 @@
         $('.sidenav').sidenav();
     })
     
+    $(document).ready(function() {
+
+var x = 1;
+  $("#stopresume").click(function() {
+    
+    if ((x % 2) != 0) {
+      $(this).html('Resume Recording');
+        x++;
+    } else{
+      $(this).html('Stop Recording');
+        x++;
+    }
+  });
+}); 
 </script>
                     
     <body>
@@ -53,60 +67,27 @@
                     
             <div class="section"></div>
                     
-            <h3 id="greeting"><i class="material-icons" style="font-size: 40px;">stop</i>&nbsp;&nbsp; Stop Recording</h3>
+            <h3 id="greeting"><i class="material-icons" style="font-size: 40px;">stop</i>&nbsp;&nbsp; Manage Device Recording</h3>
             <div class="section"></div>
             <div class="divider"></div>
             <div class="section"></div>
                     
         </div>    
-        <div class="col s12 m12 l12  white" style="padding: 0px 20px 0px 30px">
-            <form method=post>
-            <div class="row">
-                
-                <div class="col s3"></div>
-                <div class = "col s3 center">
-                    <h5 class="">Enter Device ID</h5>
-                        <div class="input-field center">
-                        <input id="device_ID" type="text" class="validate">
-                        <label for="device_ID">Device ID</label>
-                        </div>
-                        <div class='row center'>
-                            <button id='deviceID' class='btn btn-small waves-effect'>Load</button>
-                        </div>
-                    
-                </div>
-                
-                <div class="col s3 center">
-                    <h5 class="">Patient/s using the Device</h5>
-                    <script>
-                        $(document).ready(function(){
-                        $("#deviceID").click(function(){
-                        $("#device_ID").val("123");
-                        $("#namesofUser").append('<label><input type="checkbox" class="filled-in" checked="checked" /><span>Tommy Botabara</span>');
-                        event.preventDefault();
-                        });
-                    });
-                    </script>
-                    
-                    <p id="namesofUser"></p>
-                    
-                </div>
-                <div class="col s3"></div>
-                
-            </div>
-            
-            <DIV class="row">
-            
-                <div class="col s3"></div>
-                <div class="col s6 center">
-                
-                    <button class="btn btn-large waves-effect red lighten-2" type="submit">Stop Recording</button>
-                    
-                </div>
-                <div class="col s3"></div>
-            
-            </DIV>
-            </form>  
+        <div id ="manageRecord" class="col s12 m12 l12  white" style="padding: 0px 20px 0px 30px">
+                <center>
+                    <label>Choose Patient ID</label>
+                      <select class="browser-default" style="width: 35%;">
+                        <option value="" disabled selected>Choose Patient</option>
+                        <option value="1">12345</option>
+                        <option value="2">12347</option>
+                        <option value="3">12346</option>
+                    </select>
+                <br />
+                <br />
+                    <button class="btn-large" id="stopresume">Stop Recording</button>
+                </center>
+            <br />
+            <br />
         </div>
         <section></section>
         <section></section>
