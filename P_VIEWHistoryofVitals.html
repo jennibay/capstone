@@ -4,22 +4,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="css/HOMEPAGE.css">
 </head>
     
 <title>penge site name</title>
     
-<script>
+<style>
+
+    .optionx{
+        display:none;
+    }
+    
+</style>
+    <script>
+        $(function() {
+          $('#typeofSearch').change(function(){
+            $('.optionx').hide();
+            $('#' + $(this).val()).show();
+          });
+        });
+        
     $(document).ready(function(){
         $('.sidenav').sidenav();
-    })
-    
-     $(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
-</script>      
+    });
+        
+    </script>  
 
-    <body>
+    <body onload ="yearLoad()">
         
         <!--------------------------------------------------------- START / NAV BAR --------------------------------------------------------->
         
@@ -56,53 +68,77 @@
                 <div class="section"></div>
                 <div class="col s3"></div>
                 <div class="col s6">        
-                    <h3 id="greeting"><i class="material-icons" style="font-size: 40px;">list</i>&nbsp;&nbsp; History of Vitals</h3>
+                    <h3 id="greeting"><i class="material-icons" style="font-size: 40px;">list</i>&nbsp;&nbsp; History of Records</h3>
+                    Medical history and past recorded vitals of the patient.
                 </div>
-                <div class="col s3" style ="padding: 0px 40px 0px 20px">
-                    <form>
-                        <div class="input-field grey">
-                          <input id="search" type="search" required>
-                          <label class="label-icon" for="search"><i class="material-icons" id="searchIcon">search</i></label>
-                          <i class="material-icons">close</i>
-                        </div>
-                      </form>
-                </div>
+                <div class="col s3"></div>
             </div>
             <div class="section"></div>
             <div class="divider"></div>
             <div class="section"></div>
                     
-        </div>    
-        <div class="col s12 m12 l12 white" style="padding: 0px 20px 0px 30px">
-            <div class="row">
-                <div class="col s4 m4 l4">
-                    <h5>Search by Date</h5>
-                    <label>
-                        <input placeholder="Ex: Jun 16, 2005" id = "day" type="text" class="datepicker">
-                        <span>Enter Date</span>
-                    </label>
-                </div>
-                <div class="col s4">
-                    <h5>Search by Month and Year</h5>
-                    <label>
-                        <input placeholder="Ex: Jun 2005" id = "day" type="text" class="datepicker">
-                        <span>Enter Date</span>
-                    </label>
-                </div> 
-                <div class="col s4">
-                    <h5>Search by Year</h5>
-                    <label>
-                        <input placeholder="Ex: Jun 16, 2005" id = "day" type="text" class="datepicker">
-                        <span>Enter Date</span>
-                    </label>
-                </div>
-            </div>
-            <div class='row center'>
-                <div class="col s5"></div>
-                    <button type='submit' name='btn_login' class='col s2 btn btn-large waves-effect'>Submit</button>
-                <div class="col s5"></div>
-            </div>
         </div>
+            <div class="white" style="padding: 0px 20px 0px 30px">
+                <div class="row center">
+                    <div class="col s6">
+                        <H5>Search for:</H5><br/>
+                        <p>
+                          <label>
+                            <input class="with-gap" name="group1" id="0" type="radio"  />
+                            <span>Medical Forms</span>
+                          </label>&nbsp;&nbsp;&nbsp;
+                          <label>
+                            <input class="with-gap" name="group1" id="1" type="radio"  />
+                            <span>Past Vital Records</span>
+                          </label>
+                        </p>
+                    </div>
+                    <div class ="col s6">
+                        <H5>Search by:</H5>
+                        <div id="selectDateMonthYear">
+                            <br />
+                            <div class="col s3"></div>
+                            <select class="browser-default center col s6" id="typeofSearch">
+                                <option value="" disabled selected>Choose by Date or Month and Year</option>
+                                <option value="date">Search by date</option>
+                                <option value="month">Search by month and year</option>
+                                <!--<option value="year">Search by year</option>-->
+                            </select>
+                            <div class="col s3"></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row center">
+                    <div id="date" class="optionx date">
+                        <h5>Search by Date</h5>
+                        <label>
+                            <input id = "day" type="date" style="width:35%;" class="dateonly">
+                            <br /><span>Enter Date</span>
+                        </label>
+                    </div>
+                    <div id="month" class="optionx month">
+                        <h5>Search by Month and Year</h5>
+                        <label>
+                            <input id = "monthandyear" type="month" style="width:35%; height:8%;">
+                            <br /><span>Enter Date</span>
+                        </label>
+                    </div> 
+                    <div id="year" class="optionx year"><center>
+                        <h5>Search by Year</h5>
+                        <label>
+                            <select id = "year" type="text" class="browser-default" style="width:35%;"></select>
+                            <br /><span>Enter Date</span>
+                        </label></center>
+                    </div>
+                </div>
+                <div class='row center'>
+                    <div class="col s5"></div>
+                        <button type='submit' name='btn_login' class='col s2 btn btn-large waves-effect'>Search</button>
+                    <div class="col s5"></div>
+                </div>
+                <div class="section"></div>
+            </div>
         
         <!----------------------------------------------------- FOOTER STARTS HERE ----------------------------------------------------------->
         <div class="section"></div>
