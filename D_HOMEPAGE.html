@@ -14,167 +14,8 @@
     
 <title>penge site name</title>
     
- <style>
-#chartdiv {
-	width	: 100%;
-	height	: 300px;
-}
-#chartdiv2 {
-	width	: 100%;
-	height	: 300px;
-}
-     
-</style>
     
-<script>var chart = AmCharts.makeChart("chartdiv2", {
-    "type": "serial",
-    "theme": "light",
-    "marginRight": 70,
-    "autoMarginOffset": 20,
-    "dataProvider": [{
-        "year": "1995",
-        "value": 0.177
-    }, {
-        "year": "1996",
-        "value": 0.104
-    }, {
-        "year": "1997",
-        "value": 0.255
-    }, {
-        "year": "1998",
-        "value": 0.21
-    }, {
-        "year": "1999",
-        "value": 0.065
-    }, {
-        "year": "2000",
-        "value": 0.11
-    }, {
-        "year": "2001",
-        "value": 0.172
-    }, {
-        "year": "2002",
-        "value": 0.462
-    }, {
-        "year": "2003",
-        "value": 0.47
-    }, {
-        "year": "2004",
-        "value": 0.445
-    }, {
-        "year": "2005",
-        "value": 0.47
-    }],
-    "balloon": {
-        "cornerRadius": 6
-    },
-    "valueAxes": [{
-        "axisAlpha": 0
-    }],
-    "graphs": [{
-        "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]] C</span></b>",
-        "bullet": "round",
-        "bulletSize": 6,
-        "connect": false,
-        "lineColor": "#b6d278",
-        "lineThickness": 2,
-        "negativeLineColor": "#487dac",
-        "valueField": "value"
-    }],
-    "chartCursor": {
-        "categoryBalloonDateFormat": "YYYY",
-        "cursorAlpha": 0.1,
-        "cursorColor": "#000000",
-        "fullWidth": true,
-        "graphBulletSize": 2
-    },
-    "chartScrollbar": {},
-    "dataDateFormat": "YYYY",
-    "categoryField": "year",
-    "categoryAxis": {
-        "minPeriod": "YYYY",
-        "parseDates": true,
-        "minorGridEnabled": true
-    },
-    "export": {
-        "enabled": true
-    }
-});
-    
-var chart = AmCharts.makeChart("chartdiv", {
-    "type": "serial",
-    "theme": "light",
-    "marginRight": 70,
-    "autoMarginOffset": 20,
-    "dataProvider": [{
-        "year": "1995",
-        "value": 0.177
-    }, {
-        "year": "1996",
-        "value": 0.104
-    }, {
-        "year": "1997",
-        "value": 0.255
-    }, {
-        "year": "1998",
-        "value": 0.21
-    }, {
-        "year": "1999",
-        "value": 0.065
-    }, {
-        "year": "2000",
-        "value": 0.11
-    }, {
-        "year": "2001",
-        "value": 0.172
-    }, {
-        "year": "2002",
-        "value": 0.462
-    }, {
-        "year": "2003",
-        "value": 0.47
-    }, {
-        "year": "2004",
-        "value": 0.445
-    }, {
-        "year": "2005",
-        "value": 0.47
-    }],
-    "balloon": {
-        "cornerRadius": 6
-    },
-    "valueAxes": [{
-        "axisAlpha": 0
-    }],
-    "graphs": [{
-        "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]] C</span></b>",
-        "bullet": "round",
-        "bulletSize": 6,
-        "connect": false,
-        "lineColor": "#b6d278",
-        "lineThickness": 2,
-        "negativeLineColor": "#487dac",
-        "valueField": "value"
-    }],
-    "chartCursor": {
-        "categoryBalloonDateFormat": "YYYY",
-        "cursorAlpha": 0.1,
-        "cursorColor": "#000000",
-        "fullWidth": true,
-        "graphBulletSize": 2
-    },
-    "chartScrollbar": {},
-    "dataDateFormat": "YYYY",
-    "categoryField": "year",
-    "categoryAxis": {
-        "minPeriod": "YYYY",
-        "parseDates": true,
-        "minorGridEnabled": true
-    },
-    "export": {
-        "enabled": true
-    }
-});
+<script>
     
     $(document).ready(function(){
         $('.sidenav').sidenav();
@@ -227,7 +68,7 @@ var chart = AmCharts.makeChart("chartdiv", {
                     
                 </div>
                 
-                <div class="col s4 m4 l4 center teal lighten-2" style="padding: 30px 20px 20px 20px;">
+                <div class="col s6 center teal lighten-2" style="padding: 30px 20px 20px 20px;">
                     
                     <a href="D_VIEWAssignedPatients.html"><img class="responsive-image" src="images/viewlistofusers.PNG" height="200px;"/></a>
                     <div class="section"></div>
@@ -238,7 +79,7 @@ var chart = AmCharts.makeChart("chartdiv", {
                     
                 </div>
                 
-                <div class="col s4 m4 l4 center teal lighten-3" style="padding: 30px 20px 20px 20px;">
+                <!--<div class="col s4 m4 l4 center teal lighten-3" style="padding: 30px 20px 20px 20px;">
                 
                     <a href="D_CHANGEintervals.html"><img class="responsive-image" src="images/changeinterval.PNG" height="200px;"/></a>
                     <div class="section"></div>
@@ -248,72 +89,21 @@ var chart = AmCharts.makeChart("chartdiv", {
                     </p>
                     
                 
-                </div>
+                </div>-->
                 
-                <div class="col s4 m4 l4 center teal lighten-4" style="padding: 30px 20px 20px 20px;">
+                <div class="col s6 center teal lighten-3" style="padding: 30px 20px 20px 20px;">
                 
-                    <a href="D_STOPRecording.html"><img class="responsive-image" src="images/stoprecord.PNG" height="200px;"/></a>
+                    <a href="D_MANAGEdevicerec.html"><img class="responsive-image" src="images/manageDeviceRecords.png" height="200px;"/></a>
                     <div class="section"></div>
-                    <h6 id="greeting">Stop Recording</h6>
+                    <h6 id="greeting">Manage Device Recording</h6>
                     <p align="justify">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sollicitudin facilisis turpis, id rhoncus magna fermentum sed. Nunc vel venenatis mauris.
                     </p>
                     
                 </div>
-                
+              
+                    <div class="section"></div> 
         </div>
-                    <!------------------------------------- ROW2- Guide on Knowing ------------------------------------------>
-                
-            <div class="col s12 white">
-                <div class="row white">
-                    <div class="col s12 center white">
-                        <div class="section"></div>
-                        <div class="divider"></div>
-                        <h3 class="center" id="greeting">Current Vitals Recorded from Patients</h3>
-                        Date: <b>September 30, 2018</b> | 11:30 PM
-                <!-- Maglalagay ako ng realtime clock dito -->
-                        <div class="section"></div>
-                        
-                        <div class="row white" style="margin: 10px">
-            
-                            <div class="col s12 white">
-                                <div class="col s6 white">
-                                    <h5 class="center green lighten-3"><b>Dela Cruz, Jhoana</b></h5>
-                                    <h6 class="center green lighten-4">ECG</h6>
-                                    <div id="chartdiv"></div>
-                                    <div class="col s6 center green lighten-4">
-                                        <h6 class="center">Temperature</h6>
-                                        <h4 class="center">37.9°C</h4>
-                                    </div>
-                                    <div class="col s6 center green lighten-5">
-                                        <h6 class="center">Heartrate</h6>
-                                        <h4 class="center">73 bpm</h4>
-                                    </div>
-                                    <a class="right btn-small waves-effect waves-light green lighten-2" href=""> View History of Vitals
-                                    <i class="material-icons left">person_outline</i>
-                                  </a>
-                                </div>
-                                <div class="col s6 center white">
-                                    <h5 class="green lighten-3"><b>Botabara, Tommy</b></h5>
-                                    <h6 class="center green lighten-4">ECG</h6>
-                                    <div id="chartdiv2"></div>
-                                    <div class="col s6 center green lighten-4">
-                                        <h6 class="center">Temperature</h6>
-                                        <h4 class="center">38°C</h4>
-                                    </div>
-                                    <div class="col s6 center green lighten-5">
-                                        <h6 class="center">Heartrate</h6>
-                                        <h4 class="center">81 bpm</h4>
-                                    </div>
-                                    <a class="right btn-small waves-effect waves-light green lighten-2" href=""> View History of Vitals
-                                    <i class="material-icons left">person_outline</i>
-                                  </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         
         <!----------------------------------------------------- FOOTER STARTS HERE ----------------------------------------------------------->
