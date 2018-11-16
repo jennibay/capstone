@@ -1,0 +1,143 @@
+<!------------------------------------------------------- BODY STARTS HERE ------------------------------------------------------------->
+            
+                    <!------------------------------------- ROW1- What to do? ------------------------------------------->
+            
+        <div class="col s12 m12 l12 center white">
+                    
+            <div class="section"></div>
+                    
+            <h3 id="greeting"><i class="material-icons" style="font-size: 40px;">person_add</i>&nbsp;&nbsp;Create a User</h3>
+            <div class="section"></div>
+            <div class="divider"></div>
+            <div class="section"></div>
+                    
+        </div>
+      <div class="col s12 m12 l12  white" style="padding: 0px 70px 0px 70px;">
+              <div class="row">
+                <form class="col s12 white">
+                    
+                    <!---------------- USERNAME ---------------------------------------------------->
+                    <div class="row">
+                        <h5>Account Details</h5><br />
+                        <div class="divider"></div><br />
+
+                        <div class="input-field col s4">
+                          <input id="username" type="text" class="validate">
+                          <label for="username">Username</label>
+                        </div>
+                    </div>
+                      
+                    <!---------------- PASSWORD --------------------------------------------------->
+                    <div class="row">
+                        <div class="input-field col s4">
+                          <input id="password" type="password" class="validate">
+                          <label for="password">Password</label>
+                        </div>
+                        <div class="input-field col s4">
+                          <input id="reppassword" type="password" class="validate">
+                          <label for="reppassword">Repeat Password</label>
+                        </div>
+                    </div>
+                    
+                    <!---------------- NAME ------------------------------------------------------->
+                    <div class="row">
+                        <h5>Personal Details</h5><br />
+                        <div class="divider"></div><br />
+
+                        <div class="input-field col s4">
+                            <input placeholder="ex: Juan" id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                      
+                        <div class="input-field col s4">
+                            <input placeholder="ex: Flores" id="middle_name" type="text" class="validate">
+                            <label for="middle_name">Middle Name</label>
+                        </div>
+                      
+                        <div class="input-field col s4">
+                            <input placeholder="ex: Dela Cruz" id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    
+                    <!---------------- BIRTHDAY && USER TYPE -------------------------------------------->
+                    <div class="row">
+                      
+                      <div class="input-field col s4">
+                          <input placeholder="1998-05-27" id="birthday" type="date" class="validate">
+                          <label for="birthday">Birthday</label>
+                      </div>
+                    
+                        <div class="col s4">
+                        Type of User
+                          <p>
+                            <label>
+                                <input name ="userType" type="radio" id="0" onclick="show1()"/>
+                                <span>Doctor</span></label>
+                          </p>
+                          <p>
+                            <label>
+                                <input name ="userType" type="radio" id="1" onclick="show2()"/>
+                                <span>Patient</span>
+                            </label>
+                          </p>
+                        </div>
+                            
+                        <div class="col s4">
+                                
+                                <div id="chooseDoctor">
+                                    <label>Choose Doctor</label>
+                                    <br />
+                                      <select class="browser-default col s12">
+                                        <option value="" disabled selected>Choose Doctor assigned</option>
+                                        <option value="1">Luis Rivera</option>
+                                        <option value="2">Piolo Barleta</option>
+                                      </select>
+                                </div>
+                                <br /><br /><br />
+                                <div id="chooseBloodType">
+                                    <label>Choose Blood Type</label>
+                                    <br />
+                                      <select class="browser-default col s12">
+                                        <option value="" disabled selected>Choose Blood Type</option>
+                                        <option value="1">Type A</option>
+                                        <option value="2">Type B</option>
+                                        <option value="3">Type AB</option>
+                                        <option value="4">Type O</option>
+                                      </select>
+                                </div>
+                            </div>
+                  </div><br />
+                    
+                    <!---------------- EMAIL && CONTACT NUMBER -------------------------------------------->
+                    <div class="row">
+                    
+                        <h5>Contact Details</h5><br />
+                        <div class="divider"></div><br />
+                        
+                        <div class="input-field col s4">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email Address</label>
+                        </div>
+                      
+                        <div class="input-field col s4">
+                            <input id="contactnumber" type="number" class="validate">
+                            <label for="contactnumber">Contact Number</label>   
+                        </div>
+                    
+                    </div>
+                    
+                    <br /><br />
+                    
+                    <div class="row">
+                    
+                        <center>
+                        
+                            <button type='submit' name='btn_login' class='btn btn-large waves-effect'>Add User</button>
+                        
+                        </center>
+                    
+                    </div>
+                </form>
+              </div>
+        </div>
