@@ -9,7 +9,7 @@
     }
 
     body {
-      background: #80C6BE;
+      background: #409a90;
     }
 
     #container {
@@ -20,20 +20,6 @@
         color: white;
         padding-top: 10px
     }
-
-    .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/bg_17.png");
-
-    /* Set a specific height */
-    height: 50%;
-
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-   }
 
     #greeting{
         font-family: Montserrat;
@@ -52,5 +38,5 @@
     }
 
     .nav-wrapper .brand-logo img {
-    height: 63px;
+    height: 100%;
 }
