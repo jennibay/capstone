@@ -15,7 +15,7 @@
         $(".dropdown-trigger").dropdown();
     })
     
-    
+     
     function startTime() {
         var today = new Date();
         var h = today.getHours();
@@ -36,18 +36,18 @@
             if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
             return i;
         }
+    
 </script>      
 
     <body onload="startTime()">
         
         <!--------------------------------------------------------- START / NAV BAR --------------------------------------------------------->
         
+        
         <ul id="dropdown1" class="dropdown-content">
           <li><a href="#!">Manage Account</a></li>
-            <li><a href="#!">Create User Accounts</a></li>
-          <li><a href="#!">View List of Users</a></li>
-          <li><a href="#!">Change User of Device</a></li>
-          <li><a href="#!">Fill Out Medical Form</a></li>
+          <li><a href="#!">List of Assigned Patients</a></li>
+          <li><a href="#!">Manage Device Recordings</a></li>
         </ul>
         <nav class="z-depth-0" style="padding: 0px 10px px 10px; background-color: rgba(255, 255, 255, 0.2);">
             <div class="nav-wrapper">
@@ -55,6 +55,7 @@
                 <a href="#" class="sidenav-trigger" data-target="mobile-nav"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#" class="white-text"><i class="material-icons left white-text">home</i>Homepage</a></li>
+                    <li><a href="#" class="white-text"><i class="material-icons left white-text">notfication_importat</i>Notifications</a></li>
                   <!-- Dropdown Trigger -->
                     <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons left">view_list</i>Modules<i class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a href="#" class="white-text"><i class="material-icons left white-text">input</i>Log Out</a></li>
@@ -65,10 +66,8 @@
         <ul class="sidenav" id="mobile-nav">
             <li><a href="#" class="black-text"><i class="material-icons left black-text">home</i>Homepage</a></li>
             <li><a href="#" class="black-text"><i class="material-icons left black-text">person</i>Manage Account</a></li>
-            <li><a href="#" class="black-text"><i class="material-icons left black-text">account_circle</i>Create User Accounts</a></li>
-            <li><a href="#" class="black-text"><i class="material-icons left black-text">list</i>View List of Users</a></li>
-            <li><a href="#" class="black-text"><i class="material-icons left black-text">devices</i>Change User of Device</a></li>
-            <li><a href="#" class="black-text"><i class="material-icons left black-text">insert_drive_file</i>Fill Out Medical Form</a></li>
+            <li><a href="#" class="black-text"><i class="material-icons left black-text">list</i>List of Assigned Patients</a></li>
+            <li><a href="#" class="black-text"><i class="material-icons left black-text">video_label</i>Manage Device Recordings</a></li>
             <li><a href="login.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
         </ul>
 
@@ -83,7 +82,7 @@
 
                     <div class="section"></div>
 
-                    <h3 id="greeting">Welcome, Admin!</h3>
+                    <h3 id="greeting">Welcome, Doctor!</h3>
                     What do you want to do today?<br/>
                     <div class="section"></div>
                     <div class="divider"></div>
@@ -96,13 +95,12 @@
         
             <div class ="row" style="padding: 20px;">
                 
-                <div class="col s12 m2 l2">
-                </div>
+                <div class="col s12 m2 l2"></div>
                 <div class="col s12 m4 l4">
                     
                     <h5><i class="material-icons left">access_time</i><b>Clock</b></h5><br/>
                     
-                    <div class="col s12 yellow lighten-3 z-depth-1 center" style="padding: 3%; border-radius: 10px;">
+                    <div class="col s12 yellow lighten-3 z-depth-1 center" style="padding: 2%; border-radius: 10px;">
                          
                         <big><big><b><p id="stringDate" align="center"></p></big></big></b>
                             
@@ -112,11 +110,12 @@
                 </div>
                 <div class="col s12 m4 l4 white">
 
-                    <h5><i class="material-icons left">group</i><b>Newly Added Users</b></h5><br/>
+                    <h5><i class="material-icons left">notification_important</i><b>Notifications</b></h5><br/>
+                    
                     <div class="col s12 green lighten-2 z-depth-1" style="padding: 3.5%; border-radius: 10px;">
                          <span class="white-text">
-                             <b>1. Chips Delight</b><br/><br />
-                             <br/><div class="right"><a class="waves-effect waves-light btn green darken-2">View All Users</a>
+                             <b> You got 32 notifications.</b><br/><br/>
+                             <br/><div class="right"><a class="waves-effect waves-light btn green darken-2">View All</a>
                             </div>
                         </span>
                     </div>
@@ -128,17 +127,69 @@
             </div>
                 
             <div class="row" style="padding: 20px;">
-                
-                <div class="col s12 m12 l12">
-                    
-                    <h5><i class="material-icons left">group</i><b>Devices Currently In Use</b></h5>
+                <div class="col s12 m6 l6 white">
 
+                    <h5><i class="material-icons left">group</i><b>Assigned Patients</b></h5>
+                    Last Recorded Vitals
+                    
+                    <div class ="col s12">
+                        <center>
+                        <table class="centered">
+                        
+                            <thead><tr>
+                            
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Name</th>
+                                <th>Action</th>
+                            </tr></thead>
+                            
+                            <tr>
+                            
+                                <td>11/21/2018</td>
+                                <td>3:00 PM</td>
+                                <td>Chips Delight</td>
+                                <td><a class="waves-effect waves-light btn">View Full Results</a></td>
+                            
+                            </tr>
+                            
+                            <tr>
+                            
+                                <td>11/21/2018</td>
+                                <td>8:00 AM</td>
+                                <td>Marks And Spencer</td>
+                                <td><a class="waves-effect waves-light btn">View Full Results</a></td>
+                            
+                            </tr>
+                            
+                            <tr>
+                            
+                                <td>11/19/2018</td>
+                                <td>6:00 AM</td>
+                                <td>Jason Deichmann</td>
+                                <td><a class="waves-effect waves-light btn">View Full Results</a></td>
+                            
+                            </tr>
+                        
+                        </table>
+                        </center>
+                    </div>
+
+                </div>
+
+                
+                <div class="col s12 m6 l6">
+                    
+                    <h5><i class="material-icons left">group</i><b>Assigned Patients' Devices</b></h5>
+                    Patient's Devices current statuses
+                
                     <center>
                         <table class="centered">
                         
                             <thead><tr>
                             
                                 <th>Device ID</th>
+                                <th>Status</th>
                                 <th>Assigned Patient</th>
                                 <th>Action</th>
                             </tr></thead>
@@ -146,6 +197,7 @@
                             <tr>
                             
                                 <td>11/21/2018</td>
+                                <td>Not Recording</td>
                                 <td>Chips Delight</td>
                                 <td><a class="waves-effect waves-light btn">Manage Device</a></td>
                             
@@ -154,6 +206,7 @@
                             <tr>
                             
                                 <td>11/21/2018</td>
+                                <td>Not Recording</td>
                                 <td>Chips Delight</td>
                                 <td><a class="waves-effect waves-light btn">Manage Device</a></td>
                             
@@ -162,6 +215,7 @@
                             <tr>
                             
                                 <td>11/21/2018</td>
+                                <td>Not Recording</td>
                                 <td>Chips Delight</td>
                                 <td><a class="waves-effect waves-light btn">Manage Device</a></td>
                             
@@ -193,7 +247,6 @@
               </div>
             </footer>
     </body>
-    
     <script>
     
         x = new Date();
