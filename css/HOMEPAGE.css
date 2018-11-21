@@ -1,4 +1,4 @@
- body {
+    body {
       display: flex;
       min-height: 100vh;
       flex-direction: column;
@@ -9,7 +9,7 @@
     }
 
     body {
-      background: linear-gradient(to top left, #b2dfdb 0%, #fff   100%);
+      background: #80C6BE;
     }
 
     #container {
@@ -40,9 +40,15 @@
 
     }
 
-    nav ul li:hover {
-       background-color: rgba(255, 255, 255, 0.1);
-       box-shadow: none;
+    .tab{
+        padding-right: 10px;
+        background-color:#80C6C1;
+        
+    }
+    .tab:hover{
+
+        background-color:#89bcb6;
+
     }
 
     .nav-wrapper .brand-logo img {
