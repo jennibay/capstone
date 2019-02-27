@@ -1,0 +1,429 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/HOMEPAGE.css">
+</head>
+    
+<title>penge site name</title>
+    
+<style>
+    
+    
+    .options{
+        display:none;
+    }
+    .option2{
+        display:none;
+    }
+    
+</style>    
+<script>
+    
+    //NOTE!!!! (as of 2/27/19) Nag-add din ako sa style pati here sa script hehe
+    
+    $(function() {
+        $('#typeofManage').change(function(){
+        $('.options').hide();
+        $('#' + $(this).val()).show();
+        });
+    });
+    
+    $(function() {
+        $('#typeofsetSchedule').change(function(){
+        $('.option2').hide();
+        $('#' + $(this).val()).show();
+        });
+    });
+    
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    })
+    
+    
+    $(document).ready(function() {
+
+        var x = 1;
+          $("#stopresume").click(function() {
+
+            if ((x % 2) != 0) {
+              $(this).html('Resume Recording');
+                x++;
+            } else{
+              $(this).html('Start Recording');
+                x++;
+            }
+      });
+    }); 
+    
+     $(document).ready(function(){
+    $('.timepicker').timepicker();
+  });
+          
+</script>
+                    
+    <body>
+        
+        <!--------------------------------------------------------- START / NAV BAR --------------------------------------------------------->
+        
+        <div class="hero-image">
+            <nav class="z-depth-0" style="padding: 0px 10px 10px 10px; background-color: rgba(255, 255, 255, 0.2);">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo"><img class="responsive-image" id="logo" src="images/Logo_Colored_4.png"/></a>
+
+                    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                        <i class="material-icons">menu</i>
+                    </a>
+
+                    <ul class="right hide-on-med-and-down" id="deets" style="">
+                        <li><a href="D_Notification.html" class="black-text"><i class="material-icons left black-text">notification_important</i>Notifications</a></li>
+                        <li><a href="#" class="black-text"><i class="material-icons left black-text">account_circle</i>Manage Account</a></li>
+                         <li><a href="login.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <ul class="sidenav" id="mobile-nav">
+                <li><a href="D_Notification.html" class="black-text"><i class="material-icons left black-text">notification_important</i>Notifications</a></li>
+                <li><a href="#" class="black-text"><i class="material-icons left black-text">account_circle</i>Manage Account</a></li>
+                <li><a href="LOGIN.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
+            </ul>
+        </div>
+
+        <!------------------------------------------------------- BODY STARTS HERE ------------------------------------------------------------->
+            
+                    <!------------------------------------- ROW1- What to do? ------------------------------------------->
+            
+        
+        <div class="col s12 white"><div class="col s12 m12 l12 center white">
+                    
+            <div class="section"></div>
+                    
+            <h3 id="greeting"><i class="material-icons" style="font-size: 40px;">ballot</i>&nbsp;&nbsp; Manage Device Recording</h3>
+            <div class="section"></div>
+            <div class="divider"></div>
+            <div class="section"></div>
+                    
+        </div>    
+        <div class="col s12 m12 l12 white center" style="padding: 0px 20px 0px 30px">
+            <div class="row">
+                <div class="col s3"></div>
+                <div class="col s3">
+                        <h5>Choose Patient's Name:</h5><br />
+                          <select class="browser-default center col s12" id="patientID">
+                            <option value="" disabled selected>Choose Patient</option>
+                            <option value="1">12345</option>
+                            <option value="2">12347</option>
+                            <option value="3">12346</option>
+                        </select>
+                </div>
+                <div class="col s3">
+                    <h5>Patient's Device Status:</h5><br />
+                     <div class="teal lighten-5 z-depth-1" style="padding: 3.5%; border-radius: 10px;">
+                         <span class="teal-text"><b>Still Recording</b></span>
+                    </div>
+                </div>
+                <div class="col s3"></div>
+            </div>
+            <div class="row">
+                <div class="col s3"></div>
+                <div class="col s6">
+                    <h5>Choose Action:</h5><br />
+                    <select class="browser-default center col s12" id="typeofManage">
+                        <option value="" disabled selected>Choose what to manage</option>
+                        <option value="setSchedule">Set Schedule of Recording</option>
+                        <option value="setstartend">Set Start and End date</option>
+                        <option value="setinterval">Set Interval per Recording</option>
+                        <option value="startstopresume">Start, Resume and Stop Recording</option>
+                        <option value="minmaxtemp">Set Min & Max Temperature</option>
+                        <option value="minmaxheartrate">Set Min & Max Heartrate</option>
+                    </select>
+                </div>
+                <div class="col s3"></div>
+            </div>
+        </div><br />
+            
+        <div class="col s12 m12 l12 white CENTER" style="padding: 0px 20px 0px 30px">
+            
+            <!------------------------------------- SET SCHEDULE OF RECORDING ------------------------------------------->
+            
+            <div id ="setSchedule" class="options setSchedule">
+            <div class="divider"></div>
+                <div class="row">
+                    <div class="col s12 m2 l2"></div>
+                    <div class ="col s12 m4 l4">
+                        <h5>Set Time</h5><br />
+                        <div class="input-field center">
+                            <input id="startTime" type="text" class="timepicker">
+                            <label for="startTime">Set Time</label>
+                        </div>
+                    </div>
+                    
+                    <div class ="col s12 m4 l4">
+                        <h5>Set Type of When To Record</h5><br />
+                        
+                        <label>Browser Select</label>
+                          <select class="browser-default" id="typeofsetSchedule">
+                            <option value="" disabled selected>Choose type</option>
+                            <option value="daily">Every Day</option>
+                            <option value="onceAWeek">Once A Week</option>
+                            <option value="weekdays">Weekdays</option>
+                            <option value="weekends">Weekends</option>
+                            <option value="selecteddays">On Selected Days Only</option>
+                          </select>
+                        
+                         <div id ="onceAWeek" class="option2 onceAWeek">
+                             
+                             <p>
+                              <label>
+                                <input name="week" type="radio" />
+                                <span>Monday </span>
+                              </label>
+                              <label>
+                                <input name="week" type="radio" />
+                                <span>Tuesday </span>
+                              </label>
+                              <label>
+                                <input name="week" type="radio" />
+                                <span>Wednesday </span>
+                              </label>
+                              <label>
+                                <input name="week" type="radio" />
+                                <span>Thursday </span>
+                              </label>
+                                 
+                                 <br><br>
+                                 
+                              <label>
+                                <input name="week" type="radio" />
+                                <span>Friday </span>
+                              </label>
+                              <label>
+                                <input name="week" type="radio" />
+                                <span>Saturday </span>
+                              </label>
+                              <label>
+                                <input name="week" type="radio" />
+                                <span>Sunday </span>
+                              </label>
+                            </p>
+                             
+                        </div>
+                        
+                        <div id ="selecteddays" class="option2 selecteddays">
+                             
+                             <p>
+                              <label>
+                                <input name="selected" type="checkbox" class="filled-in" />
+                                <span>Monday </span>
+                              </label>
+                              <label>
+                                <input name="selected" type="checkbox" class="filled-in" />
+                                <span>Tuesday </span>
+                              </label>
+                              <label>
+                                <input name="selected" type="checkbox" class="filled-in" />
+                                <span>Wednesday </span>
+                              </label>
+                              <label>
+                                <input name="selected" type="checkbox" class="filled-in" />
+                                <span>Thursday </span>
+                              </label>
+                                 
+                                 <br><br>
+                                 
+                              <label>
+                                <input name="selected" type="checkbox" class="filled-in" />
+                                <span>Friday </span>
+                              </label>
+                              <label>
+                                <input name="selected" type="checkbox" class="filled-in" />
+                                <span>Saturday </span>
+                              </label>
+                              <label>
+                                <input name="selected" type="checkbox" class="filled-in" />
+                                <span>Sunday </span>
+                              </label>
+                            </p>
+                             
+                        </div>
+                        
+                    </div>
+                    <div class="col s12 m2 l2"></div>
+                    
+                </div>
+                <center>
+                    <button class="btn-large" id="setdates">Set Schedule</button>
+                </center>
+            </div>
+            
+            <!------------------------------------- SET START AND END DATE ------------------------------------------->
+            
+            <div id ="setstartend" class="options startend">
+            <div class="divider"></div>
+                <div class="row">
+                    <h5>Set Start and End Date</h5><br />
+                    <div class="input-field col s3"></div>
+                    <div class="input-field col s3">
+                        <input id="startDate" type="date" class="validate">
+                        <label for="startDate">Start Date</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="endDate" type="date" class="validate">
+                        <label for="endDate">End Date</label>
+                    </div>
+                    <div class="input-field col s3"></div><br /><br />
+                </div>
+                 <div class="row">
+                    <center>
+                        <div class="input-field center" style="width:30%;">
+                            <input id="startTime" type="text" class="timepicker">
+                            <label for="startTime">Start Time</label>
+                        </div>
+                     </center>
+                </div><br />
+                
+                <center>
+                    <button class="btn-large" id="setdates">Set Dates</button>
+                </center>
+                
+            </div>
+            
+            
+            <!------------------------------------- SET INTERVAL PER RECORDDING ------------------------------------------->
+            
+            <div id="setinterval" class="options setinterval">
+            <div class="divider"></div>
+                <div class="row">
+                    <h5>Set Interval per Recording</h5><br />
+                    <div class="input-field col s3"></div>
+                    <div class="input-field col s2">
+                        <input id="hours" type="number" class="validate" min="0" max="23">
+                        <label for="hours">Hours</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <input id="minutes" type="number" class="validate" min="0" max="59">
+                        <label for="minutes">Minutes</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <input id="seconds" type="number" class="validate" min="0" max="59">
+                        <label for="seconds">Seconds</label>
+                    </div>
+                    <div class="input-field col s3s"></div>
+                </div><br />
+                
+                 <center>
+                    <button class="btn-large" id="setinterval">Set Interval</button>
+                </center>
+                
+            </div>
+            
+            
+            <!------------------------------------- MIN & MAX TEMPARATURE ------------------------------------------->
+            
+            <div id ="minmaxtemp" class="options minmaxtemp">
+            <div class="divider"></div><br />
+                
+                
+                <div class ="row">
+                    
+                    <h5>Set Min & Max Temperature</h5><br />
+                    
+                    <div class="input-field col s3"></div>
+                    <div class="input-field col s3">
+                        <input id="minTemp" type="number" class="validate" min="0">
+                        <label for="minTemp">Mininum Temperature</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="maxTemp" type="number" class="validate" min="0">
+                        <label for="maxTemp">Maximum Temperature</label>
+                    </div>
+                    <div class="input-field col s3"></div>
+                    
+                </div>
+                    
+                <center>
+                    <button class="btn-large" id="settemp">Set Temperature</button>
+                </center>
+                
+            </div>
+            
+            <!------------------------------------- MIN & MAX HEARTRATE ------------------------------------------->
+            
+            <div id ="minmaxheartrate" class="options minmaxheartrate">
+            <div class="divider"></div><br />
+                
+                
+                <div class ="row">
+                    
+                    <h5>Set Min & Max of Heartrate</h5><br />
+                    
+                    <div class="input-field col s3"></div>
+                    <div class="input-field col s3">
+                        <input id="minHeartrate" type="number" class="validate" min="0" step=".001">
+                        <label for="minHeartrate">Mininum Heartrate</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="maxHeartrate" type="number" class="validate" min="0" step=".001">
+                        <label for="maxHeartrate">Maximum Heartrate</label>
+                    </div>
+                    <div class="input-field col s3"></div>
+                    
+                </div>
+                    
+                <center>
+                    <button class="btn-large" id="setheartrate">Set Heartrate</button>
+                </center>
+                
+            </div>
+            
+            <!------------------------------------- START / STOP / RESUME ------------------------------------------->
+            
+            <div id ="startstopresume" class="options startstopresume">
+            <div class="divider"></div><br />
+                
+                <div id ="manageRecord" class="col s12 m12 l12  white" style="padding: 0px 20px 0px 30px">
+                <center>
+                    <button class="btn-large" id="stopresume">Start Recording</button>
+                </center>
+                
+            </div>
+            </div>
+            
+            
+        </div>
+        <br />
+        <section></section>
+        <section></section>
+        </div>
+        
+        
+        <!----------------------------------------------------- FOOTER STARTS HERE ----------------------------------------------------------->
+            <footer class="page-footer" style="background-color: rgba(255, 255, 255, 0.3);">
+              <div class="container">
+                <div class="row">
+                  <div class="col l6 s12">
+                    <h5 class="black-text">About the SiteName</h5>
+                    <p class="black-text">This SiteName is a system created to be able to </p>
+                  </div>
+                  <div class="col l4 offset-l2 s12">
+                    <h5 class="black-text">Links</h5>
+                    <ul>
+                      <li><a class="black-text" href="#!">Link 1</a></li>
+                      <li><a class="black-text" href="#!">Link 2</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="container black-text">
+                © 2018 All Rights Reserved
+                <a class="black-text right" href="#!">More Links</a>
+                </div>
+              </div>
+            </footer>
+        </div>
+    </body>
+</html>
