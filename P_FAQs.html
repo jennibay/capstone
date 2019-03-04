@@ -1,0 +1,159 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/HOMEPAGE.css">
+</head>
+    
+<title>OPHM | Frequesntly Asked Questions</title>
+    
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $(".dropdown-trigger").dropdown();
+    })
+</script>      
+
+    <body onload="startTime()">
+        
+        <!--------------------------------------------------------- START / NAV BAR --------------------------------------------------------->
+        
+        
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Frequently Asked Questions</a></li>
+          <li><a href="#!">Manage Account</a></li>
+            <li><a href="#!">View History of Records</a></li>
+          <li><a href="#!">Restrict User Access</a></li>
+        </ul>
+        <nav class="z-depth-0" style="padding: 0px 10px px 10px; background-color: rgba(255, 255, 255, 0.2);">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><img class="responsive-image" id="logo" src="images/Logo_Colored_4.png" style="margin-left: 10px;"></a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-nav"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#" class="white-text"><i class="material-icons left white-text">home</i>Homepage</a></li>
+                  <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons left">view_list</i>Modules<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="#" class="white-text"><i class="material-icons left white-text">input</i>Log Out</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="#" class="black-text"><i class="material-icons left black-text">home</i>Homepage</a></li>
+            <li><a href="#" class="black-text"><i class="material-icons left black-text">lock</i>Frequently Asked Questions</a></li>
+            <li><a href="#" class="black-text"><i class="material-icons left black-text">person</i>Manage Account</a></li>
+            <li><a href="#" class="black-text"><i class="material-icons left black-text">description</i>View History of Records</a></li>
+            <li><a href="#" class="black-text"><i class="material-icons left black-text">lock</i>Restrict User Access</a></li>
+            <li><a href="login.html" class="black-text"><i class="material-icons left black-text" >input</i>Log Out</a></li>
+        </ul>
+
+
+        <!------------------------------------------------------- BODY STARTS HERE ------------------------------------------------------------->
+            
+                    <!------------------------------------- ROW1- What to do? ------------------------------------------->
+        
+        <div class ="white">
+            
+            <div class="row center">
+            
+                <div class="section"></div>
+                <h4><i class="material-icons small">help</i> <b>Frequently Asked Questions</h4></b>
+                <br>
+                <div class="divider"></div>
+            
+            </div>
+            
+            <div class="container">
+            
+                <b>1. Can I view my account using my phone?</b>
+                <br>
+                Yes, our system is accessible in mobile devices as long as you have internet connection.
+                
+                <br><br>
+                
+                <b>2. Am I required to have internet connection when recording my vitals?</b>
+                <br>
+                Yes, as much as possible, so that the results can be viewed easily on your account.
+                
+                <br><br>
+                
+                <b>3. Can I update my password and personal information using this account?</b>
+                <br>
+                Yes, you can update them on the <a href="">Manage Account</a> page. You can find it under the Modules tab.
+                
+                <br><br>
+                
+                <b>4. Can I restrict the access of my data to other users?</b>
+                <br>
+                Yes, you can do it here on the <a href="">Restrict Access</a> page. You can also find it under the Modules tab.
+                
+                <br><br>
+                
+                <b>5. Can I change my doctor?</b>
+                <br>
+                Yes, as long as <u>the doctor has an account for the system</u>. You can also do it here on the <a href="">Restrict Access</a> page.
+                
+                <br><br>
+                
+                <b>6. Can I create a new account in this system?</b>
+                <br>
+                No, only the admin can create accounts for users.
+                
+                <br><br>
+                
+                <b>7. Can I let others access my account for me?</b>
+                <br>
+                As much as possible, we prefer if you are the only one who can access your account. Please be mindful that <u>you are the one in control of your own sensitive information</u>. So in case your data are accessed by others, you are the one responsible for giving them access.
+                
+                <br><br>
+
+                <b>8. As for the 5000 PHP collateral money, will I be able to get it back once I am done using the system and the device?</b>
+                <br>
+                Yes. The payment will only be refundable <b>IF AND ONLY IF <u>the device is returned safely and does not have any damages</u></b>. We will be checking first as soon as you return it to us.
+                
+                <br><br>The payment will <B><u>NOT</u></B> be refundable in cases such as:
+                <ol>
+                
+                    <li>Device gets broken while being used. You are required to <u>bring the device to the hospital for it to be replaced by a new one</u>. Payment will not be returned anymore since it will be used for the broken device.</li>
+                    <li>You were not able to return the device back on its due date.</li>
+                
+                </ol>
+                
+                <b>9. What if I do not give back my device on its due date?</b>
+                <br>
+                We will be contacting you about it. You are required to return the device at the required date set by the doctor that is indicated in the consent form.
+                
+                <br><br>
+                
+                
+                <b class="red-text">10. Will I be able to access my data using my account forever?</b> - di ako sure haha so double check. 
+                <br>
+                Yes. Although if an account is inactive after a month, the account is up for reactivation to the admin. 
+                
+                <br><br>
+                
+                </div>
+            <div class="section"></div>
+        </div>
+        
+        
+        <!----------------------------------------------------- FOOTER STARTS HERE ----------------------------------------------------------->
+            <footer class="page-footer" style="background-color: rgba(255, 255, 255, 0.3);">
+              <div class="container">
+                <div class="row">
+                  <div class="col l6 s12">
+                    <h5 class="black-text">About OPHM</h5>
+                    <p class="black-text">OPHM (Outpatient Heart Monitoring) is a system created to enable outpatients to keep track of their vitals without the need of constantly visiting the hospital.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="container black-text">
+                © 2018 All Rights Reserved
+                </div>
+              </div>
+            </footer>
+    </body>
+</html>
