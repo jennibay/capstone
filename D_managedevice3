@@ -21,8 +21,6 @@
 </style>    
 <script>
     
-    //NOTE!!!! (as of 2/27/19) Nag-add din ako sa style pati here sa script hehe
-    
     $(function() {
         $('#typeofManage').change(function(){
         $('.options').hide();
@@ -149,8 +147,8 @@
             <div class="divider"></div>
                 <div class="row">
                     <div class="col s12 m2 l2"></div>
-                    <div class ="pota col s12 m8 l8" id="mainSetTimeandDate">
-                        <h5>Set Time and Day/s of When to Record</h5><br />
+                    <div class ="col s12 m8 l8" id="mainSetTimeandDate">
+                        <h5>Set Time and Day/s of Recording</h5><br />
                             
                         <big class="left"><b>Current Scheduled Recording:</big></b>
                         <table>
@@ -174,38 +172,39 @@
                         <div class="modal-content">
                             <h5 class="center"><b><i class="material-icons">schedule</i> Set A New Schedule</b></h5><br/>
                             <div class="input-field col s12 m6 l6" id="setTime">
-                                <label id="startTime">Set Time</label>
+                                <h6 class="left"><B>Set Time</B></h6><br><br>
                                 <input id="startTime" type="text" class="timepicker" id="default_start_time" />
                             </div>
                           
-                            <div class="col s12 m6 l6">
+                            <div class="col s12 m6 l6"><br>
+                                <h6 class="left"><B>Set Day/s of Recording</B></h6><br><br>
                                 <p>
                                   <label>
-                                    <input name="selected" type="checkbox" class="filled-in" />
+                                    <input name="selected" type="checkbox" class="filled-in" id="monday" />
                                     <span>Monday </span>
                                   </label>
                                   <label>
-                                    <input name="selected" type="checkbox" class="filled-in" />
+                                    <input name="selected" type="checkbox" class="filled-in" id="tuesday" />
                                     <span>Tuesday </span>
                                   </label>
                                   <label>
-                                    <input name="selected" type="checkbox" class="filled-in" />
+                                    <input name="selected" type="checkbox" class="filled-in" id="wednesday" />
                                     <span>Wednesday </span>
                                   </label>
                                   <label>
-                                    <input name="selected" type="checkbox" class="filled-in" />
+                                    <input name="selected" type="checkbox" class="filled-in" id="thursday" />
                                     <span>Thursday </span>
                                   </label>
                                   <label>
-                                    <input name="selected" type="checkbox" class="filled-in" />
+                                    <input name="selected" type="checkbox" class="filled-in" id="friday" />
                                     <span>Friday </span>
                                   </label>
                                   <label>
-                                    <input name="selected" type="checkbox" class="filled-in" />
+                                    <input name="selected" type="checkbox" class="filled-in" id="saturday" />
                                     <span>Saturday </span>
                                   </label>
                                   <label>
-                                    <input name="selected" type="checkbox" class="filled-in" />
+                                    <input name="selected" type="checkbox" class="filled-in" id="sunday" />
                                     <span>Sunday </span>
                                   </label>
                                 </p>
