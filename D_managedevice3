@@ -55,36 +55,8 @@
   });
     
     $(document).ready(function(){
-        
-        var max = 20;
-        var content = $(".pota");
-        var add = $("#addtime");
-       
-        var x = 1;
-        $(add).click(function(e){
-            e.preventDefault();
-            if (x < max){
-                x++;
-                $(content).append('<div><div class="col s12 m5 l4 input-field center" id="setTime"><input type="text" class="timepicker" id="default_start_time"></div><div class="col s12 m5 l4 input-field center" id="setDays"><p><label><input name="selected" type="checkbox" class="filled-in" /><span>Monday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Tuesday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Wednesday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Thursday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Friday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Saturday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Sunday </span></label></p></div><button style="margin-top:12%;" class="additional btn-floating btn-small waves-effect waves-light red center" id="#removetime"><i class="material-icons">remove</i></a><br></div>');
-                
-                $('.timepicker').timepicker();
-                }
-            });
-        
-        
-        $(content).on("click", ".additional", function(e){
-            
-            e.preventDefault();
-            $(this).parent('div').remove(); 
-            x--;
-            
-            });
-        
-    });
-        
-    
-    
-    
+    $('.modal').modal();
+  });
           
 </script>
                     
@@ -178,16 +150,36 @@
                 <div class="row">
                     <div class="col s12 m2 l2"></div>
                     <div class ="pota col s12 m8 l8" id="mainSetTimeandDate">
-                        <h5>Set Time and Day/s of When to Records</h5><br />
+                        <h5>Set Time and Day/s of When to Record</h5><br />
                             
-                        <div>
-                            <div class="col s12 m5 l4 input-field center" id="setTime">
+                        <big class="left"><b>Current Scheduled Recording:</big></b>
+                        <table>
+                        
+                            <thead>
+                            
+                                <th>Time</th>
+                                <th>Day</th>
+                            
+                            </thead>
+                            
+                            <tr>
+                                <td>9:00AM</td>
+                                <td>Monday, Friday</td>
+                                
+                            </tr>
+                        
+                        </table>
+                        <br><br><a class="btn-small right modal-trigger" href="#modalSet">Set A New Schedule</a>
+                        <div id="modalSet" class="modal" style="height: 70%; width: 65%;">
+                        <div class="modal-content">
+                            <h5 class="center"><b><i class="material-icons">schedule</i> Set A New Schedule</b></h5><br/>
+                            <div class="input-field col s12 m6 l6" id="setTime">
+                                <label id="startTime">Set Time</label>
                                 <input id="startTime" type="text" class="timepicker" id="default_start_time" />
                             </div>
-
-                            <div id ="setDays" class="col s12 m5 l4">
-
-                                 <p>
+                          
+                            <div class="col s12 m6 l6">
+                                <p>
                                   <label>
                                     <input name="selected" type="checkbox" class="filled-in" />
                                     <span>Monday </span>
@@ -217,23 +209,20 @@
                                     <span>Sunday </span>
                                   </label>
                                 </p>
-                   
                             </div>
-                        </div>
                             
-                        <div class="col s12 m2 l2">
-                        
-                            <button class="center btn-floating btn-small waves-effect waves-light teal" id="addtime"><i class="material-icons">add</i></button><br>
+                           <div class="col s12"></div>
                             
+                        <br /> <br /> <br/> <br />
+                        <br /><br />
+                        <div class="col s12" style="margin-top: 16%; padding-right: 3%; padding-bottom: 5%;">
+                            <button class="btn waves-effect waves-light right" type="submit" name="action">Set Schedule
+                            </button>
                         </div>
-
                     </div>
-                    <div class="col s12 m2 l2"></div>
-                        
+                    </div>
                 </div>
-                <center>
-                    <button class="btn-large" id="setdates">Set Schedule</button>
-                </center>
+                </div>
             </div>
             
             <!------------------------------------- SET START AND END DATE ------------------------------------------->
@@ -367,7 +356,7 @@
                 </center>
                 
             </div>
-            
+            </div>
             
         </div>
         <br />
