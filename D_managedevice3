@@ -65,7 +65,7 @@
             e.preventDefault();
             if (x < max){
                 x++;
-                $(content).append('<div><div class="col s12 m5 l5 input-field center" id="setTime"><input type="text" class="timepicker" id="default_start_time"></div><div class="col s12 m5 l5 input-field center" id="setDays"><p><label><input name="selected" type="checkbox" class="filled-in" /><span>Monday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Tuesday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Wednesday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Thursday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Friday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Saturday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Sunday </span></label></p></div><button style="margin-top:12%;" class="additional btn-floating btn-small waves-effect waves-light red center" id="#removetime"><i class="material-icons">remove</i></a><br></div>');
+                $(content).append('<div><div class="col s12 m5 l4 input-field center" id="setTime"><input type="text" class="timepicker" id="default_start_time"></div><div class="col s12 m5 l4 input-field center" id="setDays"><p><label><input name="selected" type="checkbox" class="filled-in" /><span>Monday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Tuesday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Wednesday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Thursday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Friday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Saturday </span></label><label><input name="selected" type="checkbox" class="filled-in" /><span>Sunday </span></label></p></div><button style="margin-top:12%;" class="additional btn-floating btn-small waves-effect waves-light red center" id="#removetime"><i class="material-icons">remove</i></a><br></div>');
                 
                 $('.timepicker').timepicker();
                 }
@@ -181,11 +181,11 @@
                         <h5>Set Time and Day/s of When to Records</h5><br />
                             
                         <div>
-                            <div class="col s12 m5 l5 input-field center" id="setTime">
+                            <div class="col s12 m5 l4 input-field center" id="setTime">
                                 <input id="startTime" type="text" class="timepicker" id="default_start_time" />
                             </div>
 
-                            <div id ="setDays" class="col s12 m5 l5">
+                            <div id ="setDays" class="col s12 m5 l4">
 
                                  <p>
                                   <label>
@@ -366,7 +366,6 @@
                     <button class="btn-large" id="stopresume">Start Recording</button>
                 </center>
                 
-            </div>
             </div>
             
             
